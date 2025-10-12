@@ -14,14 +14,13 @@ export default function Home({adminData}){
     if(btn && menu) btn.onclick = ()=> menu.classList.toggle('open');
     const onScroll = ()=>{
       const sc = window.scrollY;
-      const el1 = document.querySelectorAll('.parallax-left')[0];
-      const el2 = document.querySelectorAll('.parallax-right')[0];
-      const el3 = document.querySelectorAll('.parallax-left')[1];
+      const el1 = document.querySelectorAll('.parallax-right')[0];
+      const el2 = document.querySelectorAll('.parallax-left')[0];
+      const el3 = document.querySelectorAll('.parallax-right')[1];
       if(el1) el1.style.transform = `translateX(${Math.min(0, sc * -0.05)}px)`;
       if(el2) el2.style.transform = `translateX(${Math.max(0, sc * 0.05)}px)`;
-      if(el3) el3.style.transform = `translateX(${Math.min(0, sc * -0.03)}px) scale(${1 - Math.min(0.2, sc/5000)})`;
+      if(el3) el3.style.transform = `translateX(${Math.min(0, sc * -0.05)}px) scale(${1 - Math.min(0.2, sc/5000)})`;
       const third = document.querySelectorAll('.parallax-left')[1];
-      if(third){ const blur = Math.min(6, sc/120); third.style.filter = `blur(${blur}px)`; }
     };
     window.addEventListener('scroll', onScroll);
     return ()=> window.removeEventListener('scroll', onScroll);
