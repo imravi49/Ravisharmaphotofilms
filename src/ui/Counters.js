@@ -1,6 +1,0 @@
-import React,{useEffect,useState} from 'react';
-export default function Counters({counters}){
-  const [vals,setVals]=useState({cities:0,couples:0,photos:0,videos:0});
-  useEffect(()=>{ const dur=1200; const start=Date.now(); let raf; const tick = ()=>{ const p=Math.min(1,(Date.now()-start)/dur); setVals({cities:Math.floor(p*counters.cities),couples:Math.floor(p*counters.couples),photos:Math.floor(p*counters.photos),videos:Math.floor(p*counters.videos)}); if(p<1) raf=requestAnimationFrame(tick); }; tick(); return ()=>cancelAnimationFrame(raf); },[counters]);
-  return (<section className='counters'><div className='cnt'><div className='num'>{vals.cities}</div><div className='label'>Cities travelled</div></div><div className='cnt'><div className='num'>{vals.couples}</div><div className='label'>Happy couples</div></div><div className='cnt'><div className='num'>{vals.photos}</div><div className='label'>Photos delivered</div></div><div className='cnt'><div className='num'>{vals.videos}</div><div className='label'>Videos produced</div></div></section>);
-}
