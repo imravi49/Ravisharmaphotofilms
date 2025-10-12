@@ -11,6 +11,7 @@
     "react-multi-date-picker": "^4.1.0",
     "firebase": "^9.23.0",
     "react-dropzone": "^14.2.3"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
