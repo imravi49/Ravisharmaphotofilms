@@ -1,0 +1,20 @@
+{
+  "name": "ravisharm_full_admin_netlify",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1",
+    "framer-motion": "^10.12.16",
+    "emailjs-com": "^3.2.0",
+    "react-multi-date-picker": "^4.1.0",
+    "firebase": "^9.23.0",
+    "react-dropzone": "^14.2.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "serve": "npx serve -s build"
+  }
+}
