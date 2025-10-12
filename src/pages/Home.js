@@ -16,7 +16,7 @@ export default function Home({adminData}){
       const sc = window.scrollY;
       const el1 = document.querySelectorAll('.parallax-right')[0];
       const el2 = document.querySelectorAll('.parallax-left')[0];
-      const el3 = document.querySelectorAll('.parallax-right')[1];
+      const el3 = document.querySelectorAll('.parallax-right')[0];
       if(el1) el1.style.transform = `translateX(${Math.min(0, sc * -0.05)}px)`;
       if(el2) el2.style.transform = `translateX(${Math.max(0, sc * 0.05)}px)`;
       if(el3) el3.style.transform = `translateX(${Math.min(0, sc * -0.05)}px) scale(${1 - Math.min(0.2, sc/5000)})`;
