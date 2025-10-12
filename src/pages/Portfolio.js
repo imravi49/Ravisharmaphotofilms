@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../../styles.css";
+import "../styles.css";
 
 export default function Portfolio({ adminData }) {
   const photos = adminData.images || [];
