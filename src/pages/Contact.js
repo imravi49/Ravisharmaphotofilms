@@ -1,0 +1,4 @@
+import React from 'react';
+export default function Contact({adminData}){
+  return (<div className='container'><h2>Contact</h2><p>We look forward to hearing from you — let’s create something beautiful together.</p><div style={{marginTop:12,display:'flex',gap:12}}><a className='icon-btn' href='mailto:ravi.rv73838@gmail.com'><img src='/assets/icon_mail.png' style={{height:32}} alt='mail'/></a><a className='icon-btn' href='https://wa.me/917383826282' target='_blank' rel='noreferrer'><img src='/assets/icon_wa.png' style={{height:32}} alt='wa'/></a><a className='icon-btn' href='https://instagram.com/Tasweer.photography' target='_blank' rel='noreferrer'><img src='/assets/icon_insta.png' style={{height:32}} alt='insta'/></a></div></div>);
+}

@@ -1,0 +1,7 @@
+import React, {useState} from 'react';
+export default function Portfolio({adminData}){
+  const sections = adminData.portfolioSections || [];
+  const photos = adminData.images || [];
+  const videos = adminData.videos.filter(v=>v.place==='Portfolio');
+  const [light,setLight]=useState(false); const [idx,setIdx]=useState(0);
+  return (<div className='container'><h2>Portfolio</h2>{sections.map((s)=>(<section key={s}><h3>{s}</h3><div className='grid-media'>{photos.filter(p=>p.category===s).map((p,i)=>(<div key={p.id} className='thumb' onClick={()=>{setIdx(i);setLight(true);}} style={{backgroundImage:`url(${p.src})`}}></div>))}</div></section>))}<h3 style={{marginTop:30}}>Portrait Films (full width)</h3><div className='videos-full'>{videos.map((v,i)=>(<div key={i} className='vid-full'><iframe src={v.url} title={'v'+i} frameBorder='0' allowFullScreen></iframe></div>))}</div>{light && <div className='lightbox'><button className='close-x' onClick={()=>setLight(false)}>×</button><button className='btn-primary small' onClick={()=>setIdx(i=> (i-1+photos.length)%photos.length)}>Prev</button><div className='lb-img' style={{backgroundImage:`url(${photos[idx] ? photos[idx].src : photos[0].src})`}}></div><button className='btn-primary small' onClick={()=>setIdx(i=> (i+1)%photos.length)}>Next</button></div>}</div>); }
