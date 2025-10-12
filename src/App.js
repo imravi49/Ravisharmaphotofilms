@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AdminPanel from "./admin/AdminPanel";
 import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio/Portfolio";
+import Portfolio from "./pages/Portfolio";
 import Films from "./pages/Films";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import InquiryModal from "./ui/InquiryModal/InquiryModal";
+import InquiryModal from "./ui/InquiryModal";
 import "./styles.css";
 
 export default function App() {
