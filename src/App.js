@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AdminPanel from "./admin/AdminPanel";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Films from "./pages/Films";
 import About from "./pages/About";
