@@ -24,7 +24,9 @@ export default function Home({ openInquiry }) {
     <main className="home-page">
       <section className="hero">
         <h1 className="hero-title">Ravi Sharma Photo & Films</h1>
-        <p className="hero-tag">Cinematic Wedding Films & Timeless Photography</p>
+        <p className="hero-tag">
+          Cinematic Wedding Films & Timeless Photography
+        </p>
         <button className="btn-primary" onClick={openInquiry}>
           Book an Inquiry
         </button>
@@ -51,7 +53,8 @@ export default function Home({ openInquiry }) {
         <div className="overlay-text">
           <h2>Why Choose Us?</h2>
           <p>
-            Because your story deserves to be remembered beautifully — through our lens.
+            Because your story deserves to be remembered beautifully — through
+            our lens.
           </p>
         </div>
       </section>
