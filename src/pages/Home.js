@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import "../../styles.css";
+import "../styles.css";
 
 export default function Home({ adminData }) {
   const defaultSlides = [
