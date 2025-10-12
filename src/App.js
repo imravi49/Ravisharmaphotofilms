@@ -15,43 +15,30 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        {/* Main routes */}
         <Routes>
-          <Route
-            path="/"
-            element={<Home openInquiry={() => setInquiryOpen(true)} />}
-          />
-          <Route
-            path="/portfolio"
-            element={<Portfolio openInquiry={() => setInquiryOpen(true)} />}
-          />
-          <Route
-            path="/films"
-            element={<Films openInquiry={() => setInquiryOpen(true)} />}
-          />
-          <Route
-            path="/about"
-            element={<About openInquiry={() => setInquiryOpen(true)} />}
-          />
-          <Route
-            path="/contact"
-            element={<Contact openInquiry={() => setInquiryOpen(true)} />}
-          />
+          <Route path="/" element={<Home openInquiry={() => setInquiryOpen(true)} />} />
+          <Route path="/portfolio" element={<Portfolio openInquiry={() => setInquiryOpen(true)} />} />
+          <Route path="/films" element={<Films openInquiry={() => setInquiryOpen(true)} />} />
+          <Route path="/about" element={<About openInquiry={() => setInquiryOpen(true)} />} />
+          <Route path="/contact" element={<Contact openInquiry={() => setInquiryOpen(true)} />} />
           <Route path="/admin" element={<AdminPanel />} />
         </Routes>
 
+        {/* Inquiry Modal */}
         {inquiryOpen && <InquiryModal onClose={() => setInquiryOpen(false)} />}
 
-        {/* Floating WhatsApp button */}
+        {/* Floating WhatsApp Button */}
         <a
-          className="fab-wa"
           href="https://wa.me/917383826282"
+          className="whatsapp-float"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <img src="/assets/icon_wa.png" alt="WhatsApp" />
         </a>
 
-        {/* Cinematic animated background */}
+        {/* Cinematic Animated Background */}
         <div className="cinematic-bg"></div>
       </div>
     </Router>
