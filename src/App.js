@@ -50,6 +50,9 @@ export default function App() {
         >
           <img src="/assets/icon_wa.png" alt="WhatsApp" />
         </a>
+
+        {/* Cinematic animated background */}
+        <div className="cinematic-bg"></div>
       </div>
     </Router>
   );
