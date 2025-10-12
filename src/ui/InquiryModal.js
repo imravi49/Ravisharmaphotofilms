@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles.css";
+import "../styles.css";
 
 export default function InquiryModal() {
   const [open, setOpen] = useState(false);
